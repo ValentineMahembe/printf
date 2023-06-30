@@ -6,6 +6,7 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * struct format - match conversions for specifiers
@@ -21,5 +22,6 @@ typedef struct format
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+char *_itoa(int n);
 
 #endif

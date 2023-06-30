@@ -43,6 +43,19 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				count++;
 				break;
+			case 'i':
+			{
+				char *str = _itoa(va_arg(args, int));
+				char *tmp = str;
+
+				while (*str)
+				{
+					_putchar(*str++);
+					count++;
+				}
+				free(tmp);
+				break;
+			}
 			default:
 				_putchar(*p);
 				count++;
